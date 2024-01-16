@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../balletje.srcs/sources_1/new/positie_balletje.vhd" \
+
+# Do not sort compile order
+nosort

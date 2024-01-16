@@ -1,0 +1,68 @@
+add_force {/positie_balletje/clk_slow} -radix hex {1 0ns} {0 500000000ps} -repeat_every 1000000000ps
+add_force {/positie_balletje/angle_index} -radix hex {0 0ns}
+add_force {/positie_balletje/running} -radix hex {1 0ns}
+add_force {/positie_balletje/peddel_touch} -radix hex {0 0ns}
+add_force {/positie_balletje/side_touch} -radix hex {0 0ns}
+add_force {/positie_balletje/top_bottom_touch} -radix hex {0 0ns}
+# add_force {/positie_balletje/pos_y_in} -radix hex {0x0a0 0ns}
+# add_force {/positie_balletje/pos_x_in} -radix hex {0x140 0ns}
+run 1ms
+
+add_force {/positie_balletje/peddel_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/peddel_touch} -radix hex {0 0ns}
+run 10ms
+add_force {/positie_balletje/side_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/side_touch} -radix hex {0 0ns}
+run 10ms
+add_force {/positie_balletje/top_bottom_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/top_bottom_touch} -radix hex {0 0ns}
+run 10ms
+
+add_force {/positie_balletje/angle_index} -radix hex {1 0ns}
+add_force {/positie_balletje/peddel_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/peddel_touch} -radix hex {0 0ns}
+run 10ms
+add_force {/positie_balletje/side_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/side_touch} -radix hex {0 0ns}
+run 10ms
+add_force {/positie_balletje/top_bottom_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/top_bottom_touch} -radix hex {0 0ns}
+run 10ms
+
+
+
+add_force {/positie_balletje/angle_index} -radix hex {2 0ns}
+add_force {/positie_balletje/peddel_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/peddel_touch} -radix hex {0 0ns}
+run 10ms
+add_force {/positie_balletje/side_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/side_touch} -radix hex {0 0ns}
+run 10ms
+add_force {/positie_balletje/top_bottom_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/top_bottom_touch} -radix hex {0 0ns}
+run 10ms
+
+
+add_force {/positie_balletje/angle_index} -radix hex {3 0ns}
+add_force {/positie_balletje/peddel_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/peddel_touch} -radix hex {0 0ns}
+run 10ms
+add_force {/positie_balletje/side_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/side_touch} -radix hex {0 0ns}
+run 10ms
+add_force {/positie_balletje/top_bottom_touch} -radix hex {1 0ns}
+run 1ms
+add_force {/positie_balletje/top_bottom_touch} -radix hex {0 0ns}
+run 10ms
+
