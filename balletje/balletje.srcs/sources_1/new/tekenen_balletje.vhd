@@ -22,7 +22,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity tekenen_balletje is
+entity tekenen is
     Port ( 
         pixelklok : in STD_LOGIC;
         pixel_value_i : in STD_LOGIC;
@@ -30,14 +30,15 @@ entity tekenen_balletje is
         pixel_y : in STD_LOGIC_VECTOR (9 downto 0);
         pos_x : in STD_LOGIC_VECTOR (9 downto 0);
         pos_y : in STD_LOGIC_VECTOR (9 downto 0);
-        size : in STD_LOGIC_VECTOR (9 downto 0);
+        size_x : in STD_LOGIC_VECTOR (9 downto 0);
+        size_y : in STD_LOGIC_VECTOR (9 downto 0);
         pixel_value_o : out STD_LOGIC
     );
-end tekenen_balletje;
+end tekenen;
 
-architecture Behavioral of tekenen_balletje is
+architecture Behavioral of tekenen is
 
 begin
-    pixel_value_o <= '1' when (pixel_x >= pos_x AND pixel_x <= pos_x + size AND pixel_y >= pos_y AND pixel_y <= pos_y + size) else pixel_value_i;
+    pixel_value_o <= '1' when (pixel_x >= pos_x AND pixel_x <= pos_x + size_x AND pixel_y >= pos_y AND pixel_y <= pos_y + size_y) else pixel_value_i;
     
 end Behavioral;
