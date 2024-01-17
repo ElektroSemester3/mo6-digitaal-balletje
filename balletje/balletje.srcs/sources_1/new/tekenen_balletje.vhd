@@ -37,8 +37,10 @@ entity tekenen is
 end tekenen;
 
 architecture Behavioral of tekenen is
-
 begin
-    pixel_value_o <= '1' when (pixel_x >= pos_x AND pixel_x <= pos_x + size_x AND pixel_y >= pos_y AND pixel_y <= pos_y + size_y) else pixel_value_i;
-    
+    pixel_value_o <= '1' when ( unsigned(pixel_x) >= unsigned(pos_x) 
+                            AND unsigned(pixel_x) <= unsigned(pos_x) + unsigned(size_x) 
+                            AND unsigned(pixel_y) >= unsigned(pos_y) 
+                            AND unsigned(pixel_y) <= unsigned(pos_y) + unsigned(size_y)
+                        ) else pixel_value_i;
 end Behavioral;
